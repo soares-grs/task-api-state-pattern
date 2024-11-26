@@ -6,15 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class Concluded implements TaskStatus  {
 
-    public void create(Task task) {
-        throw new RuntimeException("Task has been created");
-    }
-
-    public void start(Task task) {
-        throw new RuntimeException("Task has been started");
-    }
-
-    public void conclude(Task task) {
+    @Override
+    public void next(Task task) {
         throw new RuntimeException("Task has been concluded");
     }
 }
